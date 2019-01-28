@@ -27,7 +27,7 @@ Tag bookmarks into categories
 Filter bookmarks by tag
 Users manage their bookmarks
 
-###To set up the databace
+### To set up the databace
 Connect to `psql` and create the `bookrmar_manager` database:
 ```
 CREATE DATABASE bookmark_manager;
