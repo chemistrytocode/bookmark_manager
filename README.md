@@ -7,7 +7,9 @@ As a <Stakeholder>
     I'd like <Task>
  
  >As a User. 
+ 
  >So that I can see all bookmarks.
+ 
  >I'd like to show a list of bookmarks.
  
  
