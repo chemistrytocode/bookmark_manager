@@ -6,9 +6,9 @@ As a <Stakeholder>
   So that <Motivation>
     I'd like <Task>
  
- >As a User.
- So that I can see all bookmarks.
- I'd like to show a list of bookmarks.
+ >As a User. 
+ >So that I can see all bookmarks.
+ >I'd like to show a list of bookmarks.
  
  
  
