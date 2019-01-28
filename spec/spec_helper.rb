@@ -13,6 +13,14 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+require 'features/web_helpers'
+require_relative '../app.rb'
+
+Capybara.app = Bmm
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
