@@ -9,7 +9,14 @@ class Bmm < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmark.all
+      @bookmarks = Bookmark.all
+      erb :bookmarks
+  end
+
+  post '/add_bookmark' do
+    url = params[:url]
+    Bookmark.add(url)
+    redirect '/bookmarks'
   end
 
 end

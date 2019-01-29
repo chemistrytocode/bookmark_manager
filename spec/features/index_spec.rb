@@ -1,17 +1,24 @@
 require 'pg'
 
 feature 'Testing infrastructure' do
-  describe 'Hello world (index)' do
     scenario 'It should visit main page and display hello world.' do
     visit ('/')
     expect(page).to have_content "Hello, world."
-    end
+  end
+end
+
+feature 'Adding bookmarks' do
+  scenario 'I am able to add a bookmark' do
+    visit('/bookmarks')
+    fill_in('url', with: 'www.tesco.com')
+    click_button('Add Bookmark')
+    expect(page).to have_content "www.tesco.com"
   end
 end
 
 
+
 feature 'Viewing bookmarks' do
-  describe "Display all bookmarks" do
     scenario "Displays all bookmarks" do
       connection = PG.connect(dbname: 'bookmark_manager_test')
         # Add the test data
@@ -24,4 +31,3 @@ feature 'Viewing bookmarks' do
         expect(page).to have_content('www.yahoo.com')
     end
   end
-end
