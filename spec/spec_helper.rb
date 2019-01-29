@@ -16,8 +16,19 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require 'features/web_helpers'
+require_relative './setup_test_database.rb'
 require_relative '../app.rb'
+
+
+
+ENV['ENVIRONMENT'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
 
 Capybara.app = Bmm
 

@@ -9,7 +9,7 @@ class Bmm < Sinatra::Base
   end
 
   get '/bookmarks' do
-      @bookmarks = Bookmark.all
+    @bookmarks = Bookmark.all
   end
 
 end
