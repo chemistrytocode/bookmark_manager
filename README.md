@@ -27,13 +27,18 @@ Tag bookmarks into categories
 Filter bookmarks by tag
 Users manage their bookmarks
 
-### To set up the databace
+### To set up the database
 Connect to `psql` and create the `bookrmar_manager` database:
 ```
 CREATE DATABASE bookmark_manager;
 ```
 
 To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
+### To set up test database
+```
+CREATE DATABASE bookmark_manager_test;
+
 
 ### To run the Bookmark Manager app:
 
