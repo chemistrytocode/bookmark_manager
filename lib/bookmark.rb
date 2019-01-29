@@ -1,13 +1,13 @@
+require 'pg'
+
 class Bookmark
 
 attr_reader :bookmarks
 
   def self.all
-    [
-      "https://www.google.com",
-      "https://www.comparethemarket.com",
-      "https://www.tesco.com"
-    ]
+    conn = PG.connect( dbname: 'bookmark_manager')
+    result = conn.exec( "SELECT * FROM bookmarks;" )
+    result.map { |bookmark| bookmark['url']}
   end
 
 end

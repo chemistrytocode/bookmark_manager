@@ -11,3 +11,5 @@ gem 'capybara'
 gem 'selenium-webdriver'
 
 gem 'rubocop'
+
+gem 'pg'
