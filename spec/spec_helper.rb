@@ -16,8 +16,9 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require_relative './database_helpers.rb'
+require_relative './setup_test_database'
 require_relative '../app.rb'
+
 
 
 
@@ -25,7 +26,9 @@ ENV['ENVIRONMENT'] = 'test'
 
 RSpec.configure do |config|
   config.before(:each) do
+    database_setup
     setup_test_database
+    # database_connection_setup
   end
 end
 

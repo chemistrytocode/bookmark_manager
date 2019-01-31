@@ -1,9 +1,12 @@
 require 'sinatra/base'
 require './lib/bookmark'
+require './database_connection_setup'
+
 
 
 class Bmm < Sinatra::Base
-  enable :method_override
+  enable :sessions, :method_override
+  database_setup
   get '/' do
     erb :index
   end
