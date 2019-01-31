@@ -13,3 +13,5 @@ gem 'selenium-webdriver'
 gem 'rubocop'
 
 gem 'pg'
+
+gem 'sinatra-flash'
